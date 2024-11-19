@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Concientizacion ambiental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de inicio -->
+    <div id="start-screen">
+        <img src="logo.jpeg" alt="Logo del juego" id="start-logo">
+        <h1>Bienvenido al Juego de Concientizacion ambiental</h1>
+        <p>En este juego veremos las consecuencias negativas y positivas de nuestras acciones individuales a nuestras comunidades y espacios naturales</p>
+        <button id="start-button" class="button" onclick="startGame()">Empezar</button>
+    </div>
+
+    <!-- Contenedor del juego (oculto al inicio) -->
+    <div id="game-container" style="display: none;">
+        <h1>Juego de Concientizacion ambiental</h1>
+        <h2 id="level-title">Nivel 1: Limpiar el río</h2>
+        <p id="instruction">Haz clic en los elementos para limpiar el río:</p>
+        <div id="level1" class="level">
+            <button class="game-button" onclick="cleanItem(this)">
+                <img src="https://static.vecteezy.com/system/resources/previews/009/343/438/non_2x/colored-cartoon-doodle-soda-can-png.png" alt="Lata">
+            </button>
+            <button class="game-button" onclick="cleanItem(this)">
+                <img src="https://static.vecteezy.com/system/resources/previews/024/831/222/non_2x/cartoon-cute-plastic-bag-character-with-recycle-symbol-free-png.png" alt="Plástico">
+            </button>
+            <button class="game-button" onclick="cleanItem(this)">
+                <img src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-plastic-bottle-icon-cartoon-style-png-image_5233076.jpg" alt="Botella">
+            </button>
+            <button class="game-button" onclick="cleanItem(this)">
+                <img src="https://images.vexels.com/content/138577/preview/paper-letter-notebook-school-3f14a3.png" alt="Papel">
+            </button>
+        </div>
+        <button id="skip1" class="button" onclick="skipLevel1()">No quiero limpiar</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Pantalla final -->
+    <div id="end-screen" style="display: none;">
+        <img src="logo.jpeg" alt="Logo del juego" id="end-logo">
+        <h1>¡Gracias por jugar!</h1>
+        <p>Nuestras acciones repercuten en nuestro futuro,no pienses que una pequeña accion no sirve,al contrario un pequeño gesto con nuestros espacios naturales nos va a poder permitir tener un FUTURO VERDE 💚.</p>
+        <button id="restart-button" class="button" onclick="restartGame()">Reiniciar</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
